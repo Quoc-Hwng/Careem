@@ -1,0 +1,440 @@
+:root{
+    --main-color: #28a745;
+}
+body{
+    text-align: left;
+}
+/* header */
+#sec-header{
+    height: 812px;
+    position: relative;
+    overflow: hidden;
+}
+.background-img{
+    background-image:url("https://www.careem.com/pubweb-v2/super-app-v2/img/promo.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 812px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    animation: zoom-img-header 5s forwards;
+    animation-delay: 0.5s;
+}
+@keyframes zoom-img-header {
+    to{
+        transform: scale(1.1, 1.1);
+    }
+}
+#sec-header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+.logo-img{
+    width: 154px;
+    margin-left: 70px;
+    display: flex;
+}
+.logo-img img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.button{
+    text-decoration: none;
+}
+.btn-login{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: #fff;
+    height: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height:1.5em;
+    align-items: center;
+    display: inline-flex;
+}
+.btn-login:hover{
+    background-color: rgb(2, 83, 2);
+    color:#fff;
+}
+.btn-signup{
+    background-color: #fff;
+    color: var(--main-color);
+    border-color: #fff;
+    height: 42px;
+    margin-left: 3px;
+    align-items: center;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: bold;
+    line-height:1.5em;
+}
+.btn-signup:hover{
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.897)
+}
+
+.btn-menu-toggle{
+    position: absolute;
+    left: 0;
+}
+.content-info{
+    margin-top: 160px;
+}
+.ani-toLeft{
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: moveToRight 1s forwards;
+}
+.content-header{
+    color: white;
+    font-size: 18px;
+    width: 400px;
+    height: 81px;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: moveToRight 1s forwards;
+    animation-delay: 0.5s;
+}
+@keyframes moveToRight { 
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.btn-app{
+    display:flex;
+}
+.btn-app a{
+    margin-right: 10px;
+    transform:translateY(20px);
+    opacity: 0;
+    animation: stagger 1s forwards;
+    animation-delay: 1s;
+}
+.btn-app a:first-child{
+    animation-delay: 0.33s;
+}
+.btn-app a:nth-child(2){
+    animation-delay: 0.66s;
+}
+.btn-app a:nth-child(3){
+    animation-delay: 0.99s;
+}
+@keyframes stagger {  
+    to{
+        transform:translateY(0);
+        opacity: 1;
+    }    
+}
+.appear-respone{
+    display: none;
+}
+@media screen and (max-width: 992px){
+    #sec-header{
+        height: 313px;
+    }
+    .logo-img{
+        width: 92px;
+        margin: 0;
+    }
+    .btn-app{
+        display: none;
+    }
+    .btn-login{
+        height:33px;
+        width: auto;
+    }
+    .btn-login span{
+        display: none;
+    }
+    .btn-signup{
+        height:33px;
+        width: auto;
+    }
+    .content-info{
+        background-color: #F2F5F8;
+    }
+    .background-img{
+        height: 313px;
+    }
+    .btn-menu-toggle{
+        right: 0;
+        left: auto;
+    }
+    .login-sign{
+        padding-right: 45px;
+    }
+    .content-info{
+        display: none;
+    }
+    .appear-respone{
+        display: block;
+        padding: 30px;
+        margin: -20px 20px 20px 20px;
+        background-color: #F2F5F8;
+    }
+    .appear-respone h1{
+        text-align: center;
+        color: #000;
+        font-size: 32px;
+    }
+    .appear-respone p{
+        font-size: 14px;
+        text-align: center;
+        color: #000;
+        width: 100%;
+    }
+    .btn-app_appear{
+        display: flex;
+        justify-content: center;
+    }
+
+}@media screen and (max-width: 424px){
+    .btn-signup span{
+        display: none;
+    }
+    .login-sign{
+        display: flex;
+    }
+}
+
+/* become card */
+.become-card{
+    background-image: url("https://www.careem.com/pubweb-v2/super-app-v2/img/become-1.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 60px;
+    height: 620px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px);
+}
+.become-card h2{
+    font-size: 39px;
+}
+.become-card p{
+    padding:0 70px; 
+    margin-bottom: 1rem; 
+    font-size:18px;
+}
+.button{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #48A23F;
+    height:64px;
+    width: 254px;
+    border-radius: 5px;
+    font-size:20px;
+    color: #fff;
+    padding: 0 20px;
+}
+.button:hover{
+    text-decoration: none;
+    color: #fff;
+    background-color: #28a745;
+}
+#become{
+    position: relative;
+    padding-bottom: 150px;
+    margin-top: 150px;
+}
+.become-bg{
+    background-color: #48A23F;
+    z-index: -1;
+    height:460px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    transform: translateY(20px);
+
+}
+.reveal.active .become-card{
+    animation: become-toTop 2s forwards;
+    animation-delay: 1s;
+}
+.reveal.active .become-bg{
+    animation: become-toTop 1s forwards
+}
+@keyframes become-toTop{
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 992px){
+    #become{
+        position: relative;
+        padding-bottom: 40px;
+    }
+    .become-card{
+        height: 430px;
+        padding: 30px 40px;
+        margin-bottom: 30px;
+    }
+    .become-card h2{
+        font-size:26px;
+    }
+    .become-card p{
+        font-size: 14px;
+    }
+    .become-bg{
+        height:240px;
+    }
+    .button{
+        width: auto;
+    }
+}
+
+
+/* footer */
+#footer{
+    background-color: #48A23F;
+    height: auto;
+    padding: 56px;
+}
+.waper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.waper nav{
+    display: flex;
+}
+.nav-footer a{
+    margin-right: 27px;
+}
+.footer-logo_img{
+    display: flex;
+    margin-right: 80px;
+}
+
+.waper a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.social-media-link a:first-child{
+    margin-right: 30px;
+}
+.social-media-link a:nth-child(2){
+    margin-right: 30px;
+    transform:translateY(2px);
+}
+.social-media-link{
+    display: flex;
+}
+.social-media-link img{
+    margin: 0;
+    width: 20px;
+}
+#bottom{
+    padding-top: 14px;
+    border-top: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row-reverse;
+}
+#bottom p{
+    color: #fff;
+    line-height: 14px;
+    font-size: 12px;
+}
+#bottom a{
+    color: #fff;
+    line-height: 14px;
+    font-size: 12px;
+    text-decoration: none;
+}
+@media screen and (max-width: 992px) {
+    .waper{
+        display: block;
+        text-align: center;
+    }
+    .nav-footer{
+        flex-direction: column;
+    }
+    .nav-footer a{
+        margin: 0 0 17px 0;
+    }
+    .social-media-link{
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    .social-media-link img{
+        width: 30px;
+    }
+    #bottom{
+        border: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .bottom-navigation{
+        padding-bottom: 40px;
+        border-bottom: 1px solid #59B350;
+        margin-bottom: 40px;
+    }
+    .footer-logo_hidden{
+        display: block;margin: 0 auto;
+        margin-bottom: 14px;
+    }
+}
+
+/* menu slide */
+.sidenav {
+    height: 100%;
+    width: 340px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #499d3a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 20px 20px 20px;
+    display: none;
+}
+.sidenav a {
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+.show-according{
+    justify-content:space-between;
+    display: flex;
+}
+.sidenav img{
+    display: inline-flex;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.according-menu{
+    padding-left: 30px;
+    color: #fff;
+    font-size: 20px;
+}
+.according-menu p{
+    margin-bottom: 20px;
+    height: 27px;
+}
